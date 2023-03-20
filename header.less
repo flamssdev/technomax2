@@ -1,0 +1,337 @@
+body {
+  header {
+    .container {
+      padding: 0 2%;
+      position: relative;
+
+      .fotoHome {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        height: 700px;
+        z-index: 5;
+      }
+
+      .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+
+        padding: 10px 0;
+        z-index: 4;
+        width: 100%;
+
+        background-color: var(--box-header);
+
+        .endereco {
+          text-decoration: none;
+          div {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+
+            span {
+              color: var(--branco);
+              font-size: 20px;
+              text-shadow: 1px 2px 6px black;
+              text-align: center;
+            }
+          }
+        }
+
+        .contato-whatts {
+          text-decoration: none;
+          div {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            gap: 10px;
+
+            span {
+              text-shadow: var(--white-text-shadow);
+              font-size: 20px;
+            }
+          }
+        }
+      }
+
+      .efeitoLogo {
+        position: absolute;
+        left: 0;
+        top: 50px;
+        width: 100%;
+      }
+
+      .efeito {
+        position: absolute;
+        left: 0;
+        top: 200px;
+        z-index: 1;
+        width: 100%;
+      }
+      menu {
+        position: relative;
+        width: 600px;
+        z-index: 3;
+        margin: 0 10%;
+
+        display: -webkit-box;
+
+        display: -ms-flexbox;
+
+        display: flex;
+
+        .container-menu {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+
+          .logoMenu {
+            width: 100%;
+          }
+
+          ul {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            gap: 50px;
+
+            background-color: var(--azul);
+            padding: 0 35px;
+            border-radius: 30px;
+            -webkit-box-shadow: var(--black-box-shadow);
+            box-shadow: var(--black-box-shadow);
+            font-size: 32px;
+
+            li {
+              list-style-type: disc;
+
+              a {
+                text-decoration: none;
+                text-shadow: var(--white-text-shadow);
+              }
+
+              &:first-child {
+                list-style: none;
+              }
+            }
+          }
+
+          p {
+            background-color: var(--box-container-sobre-nos);
+            border-radius: 30px;
+            padding: 10px 20px;
+            margin-top: 50px;
+            font-size: 20px;
+            text-align: justify;
+            text-shadow: var(--white-text-shadow);
+          }
+
+          .contato-menu {
+            background-color: var(--azul);
+            padding: 5px 40px;
+
+            border-radius: 30px;
+            -webkit-box-shadow: var(--black-box-shadow);
+            box-shadow: var(--black-box-shadow);
+            margin-top: 60px;
+
+            text-decoration: none;
+            div {
+              cursor: pointer;
+
+              display: -webkit-box;
+
+              display: -ms-flexbox;
+
+              display: flex;
+              -webkit-box-align: center;
+              -ms-flex-align: center;
+              align-items: center;
+              -webkit-box-pack: center;
+              -ms-flex-pack: center;
+              justify-content: center;
+              gap: 8px;
+
+              img {
+                -webkit-box-shadow: 1px 2px 6px 0 black;
+                box-shadow: 1px 2px 6px 0 black;
+                border-radius: 50%;
+              }
+              span {
+                font-size: 32px;
+                text-shadow: var(--white-text-shadow);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  body {
+    header {
+      .container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        .fotoHome {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 837px) {
+  body {
+    header {
+      .container {
+        .header {
+          .logoCabecalho {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 773px) {
+  body {
+    header {
+      .container {
+        .header {
+          -ms-flex-pack: distribute;
+          justify-content: space-around;
+          gap: 5px;
+
+          .logoCabecalho {
+            margin-left: 0px;
+          }
+          .endereco {
+            margin: 0;
+            span {
+              font-size: 16px;
+            }
+          }
+
+          a {
+            .contato-whatts {
+              span {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+
+        .fotoHome {
+          height: 500px;
+        }
+
+        menu {
+          width: 600px;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    header {
+      
+      .container {
+        .header {
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          .endereco {
+            img {
+              display: none;
+            }
+            span {
+              font-size: 16px;
+            }
+          }
+        }
+
+        menu {
+          width: 100%;
+          margin: 0;
+          .container-menu {
+            ul {
+              gap: 35px;
+              font-size: 24px;
+
+              li {
+                list-style-type: none;
+              }
+            }
+
+            .contato-menu {
+              margin-top: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    header {
+      .container {
+        menu {
+          .container-menu {
+            ul {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
